@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Social Meta -->
+  <title>Dinesh S — UI/UX Designer Portfolio | Chennai, India</title>
+  <meta name="description" content="Portfolio of Dinesh S — Creative UI/UX Designer specializing in user-centered design, wireframing, prototyping, and design systems. Figma & Adobe XD expert." />
+  <meta name="keywords" content="UI/UX Designer, Figma, Adobe XD, User Research, Prototyping, Design Systems, Chennai, Portfolio, Dinesh S" />
+  <meta name="author" content="Dinesh S" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+
+  <!-- Google Fonts: Space Grotesk, Inter, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN with configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0B1120',
+              card: '#111827',
+              'card-hover': '#1a2332',
+              primary: '#3B82F6',
+              secondary: '#38BDF8',
+              accent: '#06B6D4',
+              text: '#F9FAFB',
+              muted: '#9CA3AF',
+              border: 'rgba(59,130,246,0.15)',
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            display: ['"Poppins"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-blue': '0 0 25px rgba(59,130,246,0.4), 0 0 60px rgba(59,130,246,0.15)',
+            'glow-cyan': '0 0 25px rgba(6,182,212,0.4), 0 0 60px rgba(6,182,212,0.15)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-bg text-brand-text font-body selection:bg-brand-primary/30 selection:text-brand-secondary relative">
+
+  <!-- Interactive Constellation Canvas Background -->
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center font-heading font-bold text-lg text-white group-hover:shadow-glow-blue transition-shadow duration-300">
+          D
+        </div>
+        <span class="font-heading font-semibold text-lg hidden sm:block">
+          Dinesh<span class="text-brand-primary">.</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center gap-1">
+        <li><a href="#home" class="nav-link px-3 py-2 text-sm font-medium text-brand-secondary hover:text-brand-secondary transition-colors">Home</a></li>
+        <li><a href="#about" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">About</a></li>
+        <li><a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Skills</a></li>
+        <li><a href="#projects" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Projects</a></li>
+        <li><a href="#experience" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Experience</a></li>
+        <li><a href="#certifications" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Certifications</a></li>
+        <li><a href="#timeline" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Timeline</a></li>
+        <li><a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-brand-muted hover:text-brand-secondary transition-colors">Contact</a></li>
+      </ul>
+
+      <!-- CTA Buttons -->
+      <div class="hidden lg:flex items-center gap-2.5">
+        <button id="nav-resume-btn" class="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg border border-brand-primary/30 text-brand-secondary hover:bg-brand-primary/10 transition-colors">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn-glow px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-brand-primary to-blue-600 text-white hover:shadow-glow-blue transition-all duration-300 hover:-translate-y-0.5">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-toggle" class="lg:hidden p-2 text-brand-muted hover:text-brand-text transition-colors" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-bg/95 backdrop-blur-xl border-b border-brand-border px-4 py-4 space-y-2">
+      <a href="#home" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-secondary font-medium bg-brand-primary/10">Home</a>
+      <a href="#about" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">About</a>
+      <a href="#skills" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Skills</a>
+      <a href="#projects" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Projects</a>
+      <a href="#experience" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Experience</a>
+      <a href="#certifications" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Certifications</a>
+      <a href="#timeline" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Timeline</a>
+      <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-brand-muted hover:text-brand-text hover:bg-white/5">Contact</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <button id="mobile-resume-btn" class="w-full text-center px-4 py-2.5 rounded-lg text-sm font-semibold border border-brand-primary/30 text-brand-secondary">
+          View / Download Resume
+        </button>
+        <a href="#contact" class="block text-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-brand-primary to-blue-600 text-white">
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <!-- Ambient Background Blobs -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-brand-primary/[0.08] blur-[120px] animate-pulse-glow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-brand-accent/[0.06] blur-[100px] animate-pulse-glow" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-secondary/[0.04] blur-[140px]"></div>
+    </div>
+
+    <!-- Floating Design Icons -->
+    <div class="absolute top-24 left-[10%] text-brand-primary/30 hidden md:block animate-float">
+      <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+        <i data-lucide="figma" class="w-7 h-7 text-[#F24E1E]"></i>
+      </div>
+    </div>
+    <div class="absolute top-36 right-[12%] text-brand-secondary/30 hidden md:block animate-float-delayed">
+      <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+        <i data-lucide="palette" class="w-6 h-6 text-brand-secondary"></i>
+      </div>
+    </div>
+    <div class="absolute bottom-32 left-[14%] text-brand-accent/30 hidden md:block animate-float-delayed">
+      <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+        <i data-lucide="layers" class="w-6 h-6 text-cyan-400"></i>
+      </div>
+    </div>
+    <div class="absolute bottom-28 right-[15%] text-brand-primary/30 hidden md:block animate-float">
+      <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+        <i data-lucide="sparkles" class="w-6 h-6 text-yellow-400"></i>
+      </div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium bg-brand-primary/10 text-brand-secondary border border-brand-primary/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Open to Opportunities • Immediate Joiner</span>
+      </div>
+
+      <p class="text-brand-muted text-lg sm:text-xl mb-3 font-body">Hello, I'm</p>
+
+      <!-- Animated Name -->
+      <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight">
+        <span class="gradient-text">Dinesh S</span>
+      </h1>
+
+      <!-- Dynamic Typing Role -->
+      <div class="text-xl sm:text-2xl md:text-3xl font-heading font-semibold mb-6 h-10 flex items-center justify-center text-brand-secondary">
+        <span id="typing-text">UI/UX Designer</span><span class="animate-pulse">|</span>
+      </div>
+
+      <!-- Professional Summary -->
+      <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Creative and user-focused fresher with a strong foundation in user-centered design, wireframing,
+        and high-fidelity interactive prototypes in Figma & Adobe XD. Passionate about solving real user problems
+        through accessible, data-informed interfaces.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#projects" class="btn-glow group px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-primary to-blue-600 text-white shadow-lg shadow-brand-primary/25 hover:shadow-glow-blue hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+          <span>Explore Projects</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <button id="hero-resume-btn" class="group px-7 py-3.5 rounded-xl font-semibold text-sm border border-brand-primary/30 text-brand-secondary hover:bg-brand-primary/10 hover:border-brand-secondary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>View Resume</span>
+        </button>
+        <a href="#contact" class="group px-7 py-3.5 rounded-xl font-semibold text-sm border border-white/10 text-brand-muted hover:text-brand-text hover:border-white/20 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Contact Me</span>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-16">
+        <a href="#about" class="inline-flex flex-col items-center gap-2 text-brand-muted/50 hover:text-brand-secondary transition-colors">
+          <span class="text-xs tracking-widest uppercase">Scroll Down</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">About Me</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Bridging empathetic human-centered research with digital design and technical understanding
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <!-- Left: Bio & Strengths (3 cols) -->
+        <div class="lg:col-span-3 space-y-6">
+          <div class="glass-card rounded-2xl p-6 md:p-8 card-accent-top">
+            <h3 class="font-heading text-xl font-semibold text-brand-text mb-4">
+              Who I Am
+            </h3>
+            <div class="space-y-4 text-brand-muted leading-relaxed text-[0.95rem]">
+              <p>
+                I'm <span class="text-brand-secondary font-medium">Dinesh S</span>, a creative and user-focused <span class="text-brand-text font-medium">UI/UX Designer</span> based in Chennai, Tamil Nadu. My passion lies in solving real user friction through clean visual architecture, thoughtful design systems, and delightful micro-interactions.
+              </p>
+              <p>
+                Pursuing my <span class="text-brand-text font-medium">B.Sc in Computer Science (2023–2026)</span> at Muthayammal College of Arts and Science / Periyar University, I bring a unique dual advantage: empathetic product design backed by an understanding of frontend feasibility, responsive grid mechanics, and seamless developer handoff.
+              </p>
+              <p>
+                During my internship at <span class="text-brand-text font-medium">Accent Techno Soft</span>, I designed end-to-end mobile accessories e-commerce layouts. Additionally, my academic case studies — including testing with 20+ interview participants — led to a documented <span class="text-emerald-400 font-semibold">35% increase in task completion rate</span>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Core Strengths -->
+          <div class="glass-card rounded-2xl p-6 md:p-8 card-accent-top">
+            <h3 class="font-heading text-xl font-semibold text-brand-text mb-5">
+              Core Strengths
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">🎨</span>
+                <span class="text-xs sm:text-sm text-brand-muted">User-Centered Design</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">🔬</span>
+                <span class="text-xs sm:text-sm text-brand-muted">UX Research & Surveys</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">📐</span>
+                <span class="text-xs sm:text-sm text-brand-muted">Wireframes & Flow</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">🧩</span>
+                <span class="text-xs sm:text-sm text-brand-muted">Design Systems</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">♿</span>
+                <span class="text-xs sm:text-sm text-brand-muted">WCAG Accessibility</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-primary/30 transition-colors">
+                <span class="text-lg">📱</span>
+                <span class="text-xs sm:text-sm text-brand-muted">Responsive Layouts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Quick Facts & Passion (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <!-- Quick Facts -->
+          <div class="glass-card rounded-2xl p-6 md:p-8 card-accent-top">
+            <h3 class="font-heading text-xl font-semibold text-brand-text mb-5">
+              Quick Facts
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-muted uppercase tracking-wider">Location</p>
+                  <p class="text-sm font-medium text-brand-text">Chennai, Tamil Nadu, India</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                  <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-muted uppercase tracking-wider">Education</p>
+                  <p class="text-sm font-medium text-brand-text">B.Sc Computer Science (2023–2026)</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-muted uppercase tracking-wider">Availability</p>
+                  <p class="text-sm font-medium text-emerald-400">Immediate Joining</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                  <i data-lucide="globe" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-muted uppercase tracking-wider">Languages</p>
+                  <p class="text-sm font-medium text-brand-text">English & Tamil</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                  <i data-lucide="briefcase" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-muted uppercase tracking-wider">Experience</p>
+                  <p class="text-sm font-medium text-brand-text">Internship + 2+ Case Studies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Passion Card -->
+          <div class="glass-card rounded-2xl p-6 relative overflow-hidden card-accent-top">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="heart" class="w-5 h-5 text-rose-400"></i>
+              <h3 class="font-heading text-lg font-semibold text-brand-text">My Passion</h3>
+            </div>
+            <p className="text-brand-muted text-xs sm:text-sm leading-relaxed">
+              "Great design isn't just about beautiful pixels; it's about eliminating frustration, respecting user time, and empowering individuals with interfaces that feel natural and intuitive."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section id="skills" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-brand-bg/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Skills & Toolkit</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Categorized tools, research methodologies, and technical frameworks I utilize to craft products
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <!-- Skill Categories Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12" id="skill-tabs">
+        <button class="skill-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 bg-gradient-to-r from-brand-primary to-brand-accent text-white shadow-glow-blue" data-cat="all">All Skills</button>
+        <button class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 bg-white/5 text-brand-muted hover:text-brand-text hover:bg-white/10 border border-white/5" data-cat="design">Design Tools</button>
+        <button class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 bg-white/5 text-brand-muted hover:text-brand-text hover:bg-white/10 border border-white/5" data-cat="research">UX Research</button>
+        <button class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 bg-white/5 text-brand-muted hover:text-brand-text hover:bg-white/10 border border-white/5" data-cat="prototyping">Prototyping</button>
+        <button class="skill-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 bg-white/5 text-brand-muted hover:text-brand-text hover:bg-white/10 border border-white/5" data-cat="concepts">Concepts</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="skills-container">
+        <!-- Skill 1 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="design">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="figma" class="w-4 h-4 text-[#F24E1E]"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Figma</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">92%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 w-[92%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="design">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="layers" class="w-4 h-4 text-[#FF61F6]"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Adobe XD</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">88%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 w-[88%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="prototyping">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="pen-tool" class="w-4 h-4 text-brand-secondary"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Hi-Fi & Lo-Fi Wireframing</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">90%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-brand-primary to-brand-accent w-[90%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="prototyping">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="component" class="w-4 h-4 text-emerald-400"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Design Systems & Tokens</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">85%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 w-[85%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="research">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="users" class="w-4 h-4 text-cyan-400"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">User Interviews & Surveys</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">88%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 w-[88%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="research">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="search" class="w-4 h-4 text-amber-400"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Usability Testing (Maze)</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">84%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-amber-500 to-orange-500 w-[84%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 7 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="concepts">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="lightbulb" class="w-4 h-4 text-yellow-400"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Design Thinking & IA</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">86%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 w-[86%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 8 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="concepts">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="eye" class="w-4 h-4 text-teal-400"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">WCAG Accessibility (AA/AAA)</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">80%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-500 w-[80%]"></div>
+          </div>
+        </div>
+
+        <!-- Skill 9 -->
+        <div class="glass-card rounded-xl p-5 card-accent-top group hover:-translate-y-1 transition-all" data-category="design">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary">
+                <i data-lucide="image" class="w-4 h-4 text-[#31A8FF]"></i>
+              </div>
+              <span class="font-medium text-sm text-brand-text">Photoshop & Illustrator</span>
+            </div>
+            <span class="text-xs font-semibold text-brand-secondary">75%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-blue-500 w-[75%]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED CASE STUDIES / PROJECTS ==================== -->
+  <section id="projects" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Featured Case Studies</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          In-depth UX research, wireframing, component systems, and verified testing outcomes
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: Banking Discovery App -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer card-accent-top hover:-translate-y-2 transition-all duration-300" onclick="openProjectModal(0)">
+          <div class="h-44 bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 relative p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10">
+                UX Case Study
+              </span>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                +35% Task Completion
+              </span>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Figma</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Miro</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Maze</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1 group-hover:text-brand-secondary transition-colors">
+              Digital Marketer Discovery App
+            </h3>
+            <p class="text-xs text-brand-secondary font-medium mb-3">Banking UX Redesign & Information Architecture</p>
+            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+              Conducted user interviews with 20+ participants to identify critical friction in an existing banking application, restructuring the journey map and building a Figma prototype that improved completion by 35%.
+            </p>
+            <div class="flex items-center text-xs font-semibold text-brand-primary group-hover:text-brand-secondary transition-colors">
+              <span>View Full Case Study</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: E-Commerce Checkout -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer card-accent-top hover:-translate-y-2 transition-all duration-300" onclick="openProjectModal(1)">
+          <div class="h-44 bg-gradient-to-br from-purple-600 via-pink-600 to-rose-500 relative p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10">
+                Design System
+              </span>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                15+ Screens
+              </span>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Adobe XD</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Figma</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Google Forms</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1 group-hover:text-brand-secondary transition-colors">
+              E-Commerce Website Checkout UX
+            </h3>
+            <p class="text-xs text-brand-secondary font-medium mb-3">Cart Abandonment Optimization & Reusable System</p>
+            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+              Redesigned the multi-step checkout experience to eliminate cart abandonment. Built a scalable design system across 15+ screens, validated via moderated usability tests and published on Behance.
+            </p>
+            <div class="flex items-center text-xs font-semibold text-brand-primary group-hover:text-brand-secondary transition-colors">
+              <span>View Full Case Study</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Accent Techno Soft -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer card-accent-top hover:-translate-y-2 transition-all duration-300" onclick="openProjectModal(2)">
+          <div class="h-44 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 relative p-5 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10">
+                Industry Internship
+              </span>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                Production UI
+              </span>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Figma</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Accessibility</span>
+                <span class="px-2 py-0.5 text-[10px] font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">E-commerce</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1 group-hover:text-brand-secondary transition-colors">
+              Mobile Accessories E-Commerce
+            </h3>
+            <p class="text-xs text-brand-secondary font-medium mb-3">Accent Techno Soft • Coimbatore</p>
+            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+              Created accessible, user-friendly layouts focusing on product filtering, sticky cart summary, and clean visual hierarchy to drive customer engagement and smooth user journeys.
+            </p>
+            <div class="flex items-center text-xs font-semibold text-brand-primary group-hover:text-brand-secondary transition-colors">
+              <span>View Full Case Study</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE SECTION ==================== -->
+  <section id="experience" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-brand-bg/40">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Experience</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Professional design internship and real-world product delivery
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <!-- Internship Card -->
+      <div class="glass-card rounded-2xl overflow-hidden card-accent-top">
+        <div class="h-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent"></div>
+        <div class="p-6 md:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+            <div>
+              <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Industry Internship
+              </span>
+              <h3 class="font-heading text-xl font-bold text-brand-text mt-2">
+                UI/UX Design Intern
+              </h3>
+              <p class="text-sm font-medium text-brand-secondary flex items-center gap-1.5 mt-1">
+                <i data-lucide="building-2" class="w-4 h-4"></i>
+                Accent Techno Soft
+              </p>
+            </div>
+            <div class="text-xs sm:text-sm text-brand-muted flex flex-col sm:items-end gap-1">
+              <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jun 2025 — Aug 2025</span>
+              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Coimbatore, Tamil Nadu</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-start gap-3">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-primary mt-0.5 shrink-0"></i>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                Designed a mobile accessories e-commerce website using user-centered UI/UX design principles.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-primary mt-0.5 shrink-0"></i>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                Created user-friendly layouts with a dedicated focus on smooth category navigation and usability.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-primary mt-0.5 shrink-0"></i>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                Applied clean visual hierarchy, WCAG accessibility standards, and responsive breakpoints.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-primary mt-0.5 shrink-0"></i>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                Developed cohesive UI screens to improve overall user engagement, checkout conversion, and client satisfaction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">Figma</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">E-Commerce UX</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">Wireframing</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">Accessibility</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">Design Handoff</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+  <section id="certifications" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Certifications</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Professional credentials validating industry UX competencies
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Cert 1 -->
+        <div class="glass-card rounded-2xl p-6 card-accent-top flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
+                G
+              </div>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                Professional
+              </span>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1">
+              Google UX Design Professional Certificate
+            </h3>
+            <p class="text-xs text-brand-secondary mb-3">Google • Coursera</p>
+            <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-4">
+              Comprehensive 7-course credential covering design thinking, user empathy, wireframes, Figma prototyping, and usability research studies.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400">
+            <span class="flex items-center gap-1 font-medium"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified Credential</span>
+            <span class="text-brand-muted">Coursera</span>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="glass-card rounded-2xl p-6 card-accent-top flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold">
+                UX
+              </div>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                Specialization
+              </span>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1">
+              UI/UX Design Specialization
+            </h3>
+            <p class="text-xs text-brand-secondary mb-3">Udemy / Coursera</p>
+            <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-4">
+              Advanced training in visual hierarchy, information architecture, mobile micro-interactions, responsive grids, and design system components.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400">
+            <span class="flex items-center gap-1 font-medium"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified Credential</span>
+            <span class="text-brand-muted">Udemy/Coursera</span>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="glass-card rounded-2xl p-6 card-accent-top flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">
+                Fg
+              </div>
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                Mastery
+              </span>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-brand-text mb-1">
+              Figma for UI/UX Design
+            </h3>
+            <p class="text-xs text-brand-secondary mb-3">Design+Code / Udemy</p>
+            <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-4">
+              Deep dive into modern Figma: Auto-Layout, variant component architectures, variable tokens, smart animation, and developer inspection handoff.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400">
+            <span class="flex items-center gap-1 font-medium"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified Credential</span>
+            <span class="text-brand-muted">Design+Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE SECTION ==================== -->
+  <section id="timeline" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-brand-bg/40">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Academic & Career Timeline</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Education, internships, and milestones along my product journey
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <!-- Vertical Bar -->
+        <div class="absolute top-4 bottom-4 left-4 sm:left-1/2 sm:-translate-x-1/2 w-0.5 bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-accent/30"></div>
+
+        <div class="space-y-8 sm:space-y-12">
+          <!-- Item 1: B.Sc CS -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:flex-row-reverse">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-bg border-2 border-brand-primary flex items-center justify-center z-10 shadow-glow-blue">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-brand-secondary"></i>
+            </div>
+            <div class="w-full pl-12 sm:pl-0 sm:w-[calc(50%-2rem)] sm:mr-auto sm:text-right">
+              <div class="glass-card rounded-2xl p-6 card-accent-top">
+                <div class="flex items-center gap-2 mb-2 sm:justify-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-brand-primary/15 text-brand-secondary border border-brand-primary/30">2023 — 2026</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CGPA: 6.6 / 10</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-brand-text">B.Sc Computer Science</h3>
+                <p class="text-xs sm:text-sm font-medium text-brand-secondary mb-1">Muthayammal College of Arts and Science / Periyar University</p>
+                <p class="text-xs text-brand-muted mb-3">Namakkal, Tamil Nadu</p>
+                <p class="text-xs text-brand-muted leading-relaxed sm:text-right">
+                  Studying software development, web mechanics, and HCI principles, providing a strong technical foundation to collaborate effectively with frontend developers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Internship -->
+          <div class="relative flex flex-col sm:flex-row items-start">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-bg border-2 border-brand-secondary flex items-center justify-center z-10 shadow-glow-cyan">
+              <i data-lucide="briefcase" class="w-4 h-4 text-emerald-400"></i>
+            </div>
+            <div class="w-full pl-12 sm:pl-0 sm:w-[calc(50%-2rem)] sm:ml-auto">
+              <div class="glass-card rounded-2xl p-6 card-accent-top">
+                <div class="flex items-center gap-2 mb-2 justify-start">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">Jun 2025 — Aug 2025</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Internship</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-brand-text">UI/UX Design Intern</h3>
+                <p class="text-xs sm:text-sm font-medium text-brand-secondary mb-1">Accent Techno Soft</p>
+                <p class="text-xs text-brand-muted mb-3">Coimbatore, Tamil Nadu</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Engineered end-to-end user interfaces for a mobile accessories e-commerce website, integrating intuitive search, accessibility, and high-fidelity screen specs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Higher Secondary -->
+          <div class="relative flex flex-col sm:flex-row items-start sm:flex-row-reverse">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-bg border-2 border-brand-primary flex items-center justify-center z-10">
+              <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <div class="w-full pl-12 sm:pl-0 sm:w-[calc(50%-2rem)] sm:mr-auto sm:text-right">
+              <div class="glass-card rounded-2xl p-6 card-accent-top">
+                <div class="flex items-center gap-2 mb-2 sm:justify-end">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/10 text-brand-muted border border-white/10">2020 — 2022</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">55%</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-brand-text">Higher Secondary Certificate (12th Grade)</h3>
+                <p class="text-xs sm:text-sm font-medium text-brand-secondary mb-1">Government Boys Higher Secondary School</p>
+                <p class="text-xs text-brand-muted">Sendhamangalam, Tamil Nadu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TOOLS MARQUEE ==================== -->
+  <section class="py-14 border-y border-white/5 bg-brand-bg/50 overflow-hidden relative">
+    <div class="max-w-6xl mx-auto px-4 text-center mb-6">
+      <p class="text-xs uppercase tracking-widest text-brand-secondary font-semibold">Production Tools</p>
+      <h3 class="font-heading text-xl font-bold text-brand-text mt-1">Software Stack & Handoff Toolkit</h3>
+    </div>
+
+    <div class="relative overflow-hidden w-full">
+      <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-brand-bg to-transparent pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-brand-bg to-transparent pointer-events-none"></div>
+
+      <div class="animate-marquee gap-4">
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="figma" class="w-5 h-5 text-[#F24E1E]"></i><span class="text-xs font-semibold text-brand-text">Figma</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="layers" class="w-5 h-5 text-[#FF61F6]"></i><span class="text-xs font-semibold text-brand-text">Adobe XD</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="image" class="w-5 h-5 text-[#31A8FF]"></i><span class="text-xs font-semibold text-brand-text">Photoshop</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="pen-tool" class="w-5 h-5 text-[#FF9A00]"></i><span class="text-xs font-semibold text-brand-text">Illustrator</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="columns" class="w-5 h-5 text-[#FFD02F]"></i><span class="text-xs font-semibold text-brand-text">Miro</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="search" class="w-5 h-5 text-cyan-400"></i><span class="text-xs font-semibold text-brand-text">Maze Testing</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="file-text" class="w-5 h-5 text-white"></i><span class="text-xs font-semibold text-brand-text">Notion</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="code" class="w-5 h-5 text-[#E34F26]"></i><span class="text-xs font-semibold text-brand-text">HTML / CSS</span></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/10 shrink-0"><i data-lucide="git-branch" class="w-5 h-5 text-[#F05032]"></i><span class="text-xs font-semibold text-brand-text">Git</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span class="gradient-text">Get In Touch</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Open to full-time UI/UX design opportunities, design system projects, and creative collaborations
+        </p>
+        <div class="mt-6 flex justify-center">
+          <div class="h-1 w-20 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent"></div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <!-- Contact Cards (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <!-- Email Card -->
+          <div class="glass-card rounded-2xl p-5 flex items-start justify-between card-accent-top">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-brand-muted font-medium">Email Me</p>
+                <a href="mailto:dineshui26design@gmail.com" class="text-sm font-semibold text-brand-text hover:text-brand-secondary transition-colors">
+                  dineshui26design@gmail.com
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('dineshui26design@gmail.com', this)" class="p-2 rounded-lg hover:bg-white/10 text-brand-muted hover:text-brand-text transition-colors" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="glass-card rounded-2xl p-5 flex items-start justify-between card-accent-top">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-brand-muted font-medium">Call / WhatsApp</p>
+                <a href="tel:+919092349160" class="text-sm font-semibold text-brand-text hover:text-emerald-400 transition-colors">
+                  +91-9092349160
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('+919092349160', this)" class="p-2 rounded-lg hover:bg-white/10 text-brand-muted hover:text-brand-text transition-colors" title="Copy Phone">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="glass-card rounded-2xl p-5 flex items-start gap-4 card-accent-top">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wider text-brand-muted font-medium">Location</p>
+              <p class="text-sm font-semibold text-brand-text">Chennai, Tamil Nadu, India</p>
+              <p class="text-xs text-brand-muted mt-0.5">Willing to relocate • Immediate availability</p>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="glass-card rounded-2xl p-5 card-accent-top">
+            <p class="text-xs uppercase tracking-wider text-brand-muted font-medium mb-3">Professional Profiles</p>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="https://www.linkedin.com/in/dinesh-s-29568943b" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group">
+                <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i>
+                <span class="text-xs font-semibold text-brand-text group-hover:text-blue-400">LinkedIn</span>
+                <i data-lucide="external-link" class="w-3 h-3 ml-auto text-brand-muted"></i>
+              </a>
+
+              <a href="https://behance.net/yourusername" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-cyan-500/40 hover:bg-cyan-500/5 transition-all group">
+                <i data-lucide="layout" class="w-4 h-4 text-[#1769FF]"></i>
+                <span class="text-xs font-semibold text-brand-text group-hover:text-cyan-400">Behance</span>
+                <i data-lucide="external-link" class="w-3 h-3 ml-auto text-brand-muted"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form (3 cols) -->
+        <div class="lg:col-span-3 glass-card rounded-2xl p-6 md:p-8 card-accent-top">
+          <h3 class="font-heading text-xl font-bold text-brand-text mb-2">Send a Direct Message</h3>
+          <p class="text-sm text-brand-muted mb-6">Leave your details below and I'll respond within 24 hours.</p>
+
+          <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-brand-muted mb-1.5 uppercase tracking-wider">Your Name *</label>
+                <input type="text" required placeholder="e.g. Priya Sharma" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-brand-text placeholder-brand-muted/40 text-sm focus:outline-none focus:border-brand-primary transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-brand-muted mb-1.5 uppercase tracking-wider">Your Email *</label>
+                <input type="email" required placeholder="e.g. priya@company.com" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-brand-text placeholder-brand-muted/40 text-sm focus:outline-none focus:border-brand-primary transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-brand-muted mb-1.5 uppercase tracking-wider">Subject *</label>
+              <input type="text" required placeholder="e.g. UI/UX Designer Role / Freelance Project" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-brand-text placeholder-brand-muted/40 text-sm focus:outline-none focus:border-brand-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-brand-muted mb-1.5 uppercase tracking-wider">Message *</label>
+              <textarea required rows="4" placeholder="Describe your design needs, product challenges, or team requirements..." class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-brand-text placeholder-brand-muted/40 text-sm focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn-glow w-full py-3.5 px-6 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-primary to-blue-600 text-white shadow-lg shadow-brand-primary/25 hover:shadow-glow-blue transition-all duration-300 flex items-center justify-center gap-2">
+              <span>Send Message</span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm flex items-center gap-3">
+            <i data-lucide="sparkles" class="w-5 h-5 shrink-0"></i>
+            <span>Thank you! Your message has been sent successfully. I'll get back to you promptly.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative bg-brand-bg border-t border-brand-border pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-4">
+          <a href="#home" class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center font-heading font-bold text-base text-white">
+              D
+            </div>
+            <span class="font-heading font-semibold text-lg text-brand-text">
+              Dinesh S<span class="text-brand-primary">.</span>
+            </span>
+          </a>
+          <p class="text-brand-muted text-sm max-w-sm leading-relaxed">
+            Creative fresher UI/UX Designer dedicated to accessible user research, interactive wireframing, and production design systems.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.linkedin.com/in/dinesh-s-29568943b" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-blue-400 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://behance.net/yourusername" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-cyan-400 transition-colors"><i data-lucide="layout" class="w-4 h-4"></i></a>
+            <a href="mailto:dineshui26design@gmail.com" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-brand-secondary transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+            <a href="tel:+919092349160" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-emerald-400 transition-colors"><i data-lucide="phone" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-sm font-semibold text-brand-text mb-4 uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm text-brand-muted">
+            <li><a href="#home" class="hover:text-brand-secondary transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-brand-secondary transition-colors">About</a></li>
+            <li><a href="#skills" class="hover:text-brand-secondary transition-colors">Skills</a></li>
+            <li><a href="#projects" class="hover:text-brand-secondary transition-colors">Projects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-sm font-semibold text-brand-text mb-4 uppercase tracking-wider">Contact Direct</h4>
+          <ul class="space-y-2 text-sm text-brand-muted">
+            <li>Chennai, Tamil Nadu</li>
+            <li>+91-9092349160</li>
+            <li>dineshui26design@gmail.com</li>
+            <li>Immediate Availability</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
+        <p>© 2026 Dinesh S. All rights reserved. Crafted with empathy and precision.</p>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-brand-muted hover:text-brand-text transition-colors">
+          <span>Back to Top</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== RESUME MODAL ==================== -->
+  <div id="resume-modal" class="modal-overlay">
+    <div class="modal-content text-brand-text">
+      <div class="flex items-center justify-between px-6 py-4 bg-brand-bg/90 border-b border-white/10 sticky top-0 z-20 backdrop-blur-md">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+          <h3 class="font-heading font-semibold text-sm sm:text-base">Dinesh S — Professional Resume</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-brand-secondary transition-colors">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / PDF</span>
+          </button>
+          <button onclick="closeResumeModal()" class="p-1.5 rounded-lg hover:bg-white/10 text-brand-muted hover:text-white transition-colors">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-6 sm:p-10 space-y-8 bg-[#0D1526]">
+        <!-- Resume Header -->
+        <div class="border-b border-white/10 pb-6">
+          <h1 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-1">DINESH S</h1>
+          <p class="text-brand-secondary font-medium text-lg mb-3">UI/UX Designer</p>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-brand-muted">
+            <span>Chennai, Tamil Nadu, India</span>
+            <span>•</span>
+            <a href="tel:+919092349160" class="hover:text-brand-secondary">+91-9092349160</a>
+            <span>•</span>
+            <a href="mailto:dineshui26design@gmail.com" class="hover:text-brand-secondary">dineshui26design@gmail.com</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/dinesh-s-29568943b" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-2">Professional Summary</h2>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Creative and user-focused fresher with a strong foundation in user-centered design, wireframing, and prototyping. Skilled in conducting user research, building design systems, and creating high-fidelity interactive prototypes using Figma and Adobe XD. Passionate about solving real user problems through intuitive, accessible, and visually engaging interfaces. Seeking a UI/UX Designer role to contribute to end-to-end product design.
+          </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-3">Technical Skills</h2>
+          <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block mb-1">Design Tools:</strong>
+              <span class="text-brand-muted">Figma, Adobe XD, Sketch (basic), Adobe Photoshop, Adobe Illustrator</span>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block mb-1">Prototyping & Wireframing:</strong>
+              <span class="text-brand-muted">Low & High-Fidelity Wireframes, Interactive Prototypes, Design Systems</span>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block mb-1">UX Research:</strong>
+              <span class="text-brand-muted">User Interviews, Surveys, Personas, User Journey Mapping, Usability Testing, Card Sorting</span>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block mb-1">Concepts & Collaboration:</strong>
+              <span class="text-brand-muted">Design Thinking, Information Architecture, Accessibility (WCAG), HTML/CSS, Zeplin, Miro, Notion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internship -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-3">Internship</h2>
+          <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+            <div class="flex justify-between items-center mb-1">
+              <strong class="text-brand-text text-sm sm:text-base">UI/UX Design Intern</strong>
+              <span class="text-xs text-brand-muted">Jun 2025 — Aug 2025</span>
+            </div>
+            <p class="text-xs text-brand-secondary mb-2">Accent Techno Soft, Coimbatore</p>
+            <ul class="text-xs text-brand-muted space-y-1 list-disc list-inside">
+              <li>Designed a mobile accessories e-commerce website using UI/UX design principles.</li>
+              <li>Created user-friendly layouts with a focus on smooth navigation and usability.</li>
+              <li>Applied clean visual design, accessibility, and user-centered design principles.</li>
+              <li>Developed UI screens to improve the overall user experience and engagement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-3">Academic Projects & Case Studies</h2>
+          <div class="space-y-3">
+            <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="flex justify-between items-center mb-1">
+                <strong class="text-brand-text text-sm">Digital Marketer Discovery App (Case Study)</strong>
+                <span class="text-xs text-brand-accent">Figma, Miro, Maze</span>
+              </div>
+              <ul class="text-xs text-brand-muted space-y-1 list-disc list-inside">
+                <li>Conducted user interviews and surveys with 20+ participants to identify banking pain points.</li>
+                <li>Created personas, journey maps, and information architecture to guide redesign.</li>
+                <li>Designed low & high-fidelity interactive prototypes in Figma.</li>
+                <li>Ran usability testing sessions, improving task completion rate by 35%.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="flex justify-between items-center mb-1">
+                <strong class="text-brand-text text-sm">E-Commerce Website UX Case Study</strong>
+                <span class="text-xs text-brand-accent">Adobe XD, Figma, Google Forms</span>
+              </div>
+              <ul class="text-xs text-brand-muted space-y-1 list-disc list-inside">
+                <li>Redesigned checkout flow to reduce cart abandonment.</li>
+                <li>Built a reusable design system across 15+ screens.</li>
+                <li>Created clickable prototypes and moderated usability testing.</li>
+                <li>Documented and published case study on Behance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-3">Education</h2>
+          <div class="grid sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block">B.Sc Computer Science (2023 — 2026)</strong>
+              <span class="text-brand-secondary">Muthayammal College of Arts and Science / Periyar University</span>
+              <p class="text-brand-muted mt-1">CGPA: 6.6 / 10</p>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-white/5">
+              <strong class="text-brand-text block">Higher Secondary Certificate (12th Grade) (2020 — 2022)</strong>
+              <span class="text-brand-secondary">Government Boys Higher Secondary School, Sendhamangalam</span>
+              <p class="text-brand-muted mt-1">Percentage: 55%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <h2 class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-2">Certifications & Achievements</h2>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs text-brand-muted">
+            <p>• Google UX Design Professional Certificate</p>
+            <p>• UI/UX Design Specialization (Coursera/Udemy)</p>
+            <p>• Figma for UI/UX Design (Design+Code)</p>
+            <p>• Published 2+ UX Case Studies (1,000+ views)</p>
+            <p>• Hackathon Finalist (College-Level UI/UX)</p>
+            <p>• Languages: English, Tamil | Relocate: Yes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-content text-brand-text p-6 md:p-8" id="project-modal-body">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- Toast Alert -->
+  <div id="toast" class="toast-alert">
+    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+    <span id="toast-text">Copied to clipboard!</span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ENGINE ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Typing Animation
+    const typingPhrases = [
+      'UI/UX Designer',
+      'Product Designer',
+      'Design Thinking Specialist',
+      'Figma & Adobe XD Expert',
+      'UX Researcher (20+ Interviews)',
+      'B.Sc Computer Science Graduate'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing-text');
+
+    function typeLoop() {
+      const current = typingPhrases[phraseIndex];
+      if (isDeleting) {
+        typingElement.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 30 : 70;
+      if (!isDeleting && charIndex === current.length) {
+        speed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        speed = 400;
+      }
+
+      setTimeout(typeLoop, speed);
+    }
+    typeLoop();
+
+    // Header scroll background
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 40) {
+        header.classList.add('bg-brand-bg/85', 'backdrop-blur-xl', 'border-b', 'border-brand-border', 'shadow-lg');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-brand-bg/85', 'backdrop-blur-xl', 'border-b', 'border-brand-border', 'shadow-lg');
+        header.classList.add('bg-transparent');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Interactive Constellation Canvas
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null };
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.7;
+        this.vy = (Math.random() - 0.5) * 0.7;
+        this.radius = Math.random() * 2 + 1;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.4)';
+        ctx.fill();
+      }
+    }
+
+    const particleCount = window.innerWidth < 768 ? 35 : 70;
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.15 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.8;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // Skill Tabs Filter
+    document.querySelectorAll('.skill-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.skill-tab').forEach(t => {
+          t.classList.remove('active', 'bg-gradient-to-r', 'from-brand-primary', 'to-brand-accent', 'text-white', 'shadow-glow-blue');
+          t.classList.add('bg-white/5', 'text-brand-muted', 'border', 'border-white/5');
+        });
+        tab.classList.add('active', 'bg-gradient-to-r', 'from-brand-primary', 'to-brand-accent', 'text-white', 'shadow-glow-blue');
+        tab.classList.remove('bg-white/5', 'text-brand-muted', 'border', 'border-white/5');
+
+        const cat = tab.getAttribute('data-cat');
+        document.querySelectorAll('#skills-container > div').forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Resume Modal Controls
+    const resumeModal = document.getElementById('resume-modal');
+    function openResumeModal() {
+      resumeModal.classList.add('active');
+    }
+    function closeResumeModal() {
+      resumeModal.classList.remove('active');
+    }
+    document.getElementById('nav-resume-btn')?.addEventListener('click', openResumeModal);
+    document.getElementById('hero-resume-btn')?.addEventListener('click', openResumeModal);
+    document.getElementById('mobile-resume-btn')?.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      openResumeModal();
+    });
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) closeResumeModal();
+    });
+
+    // Project Case Study Modal Data
+    const projectDetails = [
+      {
+        title: 'Digital Marketer Discovery App (Case Study)',
+        subtitle: 'Banking App Redesign & UX Optimization',
+        tools: ['Figma', 'Miro', 'Maze', 'Google Forms'],
+        overview: 'A deep-dive human-centered UX redesign of an existing banking discovery application to resolve critical workflow drop-offs and improve user retention.',
+        problem: 'Users encountered high cognitive load, hidden transaction features, and unintuitive navigation paths, causing high drop-off rates during daily banking tasks.',
+        solution: 'Conducted 20+ qualitative user interviews and surveys to map detailed personas and journey stages. Rebuilt information architecture and designed high-fidelity interactive Figma prototypes validated iteratively via Maze.',
+        features: [
+          'Conducted interviews and qualitative surveys with 20+ participants',
+          'Synthesized empathy maps, user personas, and end-to-end journey maps',
+          'Streamlined information architecture and navigation hierarchy',
+          'Designed low-fidelity paper wireframes transitioning to high-fidelity Figma components',
+          'Usability testing iterations resulting in a 35% task completion rate increase'
+        ],
+        outcome: 'Validated 35% improvement in task completion rate and significantly reduced time-on-task for primary banking actions.'
+      },
+      {
+        title: 'E-Commerce Website UX Case Study',
+        subtitle: 'Checkout Flow Redesign & Design System',
+        tools: ['Adobe XD', 'Figma', 'Google Forms'],
+        overview: 'End-to-end UX optimization addressing high checkout abandonment by engineering an atomic design system across 15+ screens.',
+        problem: 'Over 68% cart abandonment observed due to unexpected friction, ambiguous form validation states, and lack of visual consistency.',
+        solution: 'Streamlined checkout into a transparent 3-step disclosure model with sticky order summaries and an atomic component library.',
+        features: [
+          'Complete audit of cart-to-payment user flow',
+          'Built comprehensive design system across 15+ high-fidelity screens',
+          'Interactive clickable prototype with micro-animations',
+          'Moderated usability testing with feedback loops',
+          'Published comprehensive case study documentation on Behance'
+        ],
+        outcome: 'Documented dramatic drop in form friction, faster checkout completion, and high positive user feedback.'
+      },
+      {
+        title: 'Mobile Accessories E-Commerce Website',
+        subtitle: 'Accent Techno Soft Internship Project',
+        tools: ['Figma', 'Adobe XD', 'Accessibility WCAG'],
+        overview: 'Designed production-grade mobile accessories store layouts during 3-month design internship at Accent Techno Soft in Coimbatore.',
+        problem: 'The client needed an accessible, fast, and modern interface for browsing thousands of mobile accessories with instant filtering.',
+        solution: 'Developed clean visual design layouts with sticky filters, high-contrast accessible typography, and smooth product card hover interactions.',
+        features: [
+          'Mobile-first responsive layouts across desktop, tablet, and mobile',
+          'Clean categorization and quick product specification drawers',
+          'WCAG 2.1 AA compliant color contrast and readable typography',
+          'Interactive Figma prototypes prepared for engineering handoff'
+        ],
+        outcome: 'Delivered production-ready UI screens that improved overall customer engagement and browsing satisfaction.'
+      }
+    ];
+
+    const projectModal = document.getElementById('project-modal');
+    function openProjectModal(index) {
+      const p = projectDetails[index];
+      const body = document.getElementById('project-modal-body');
+      body.innerHTML = `
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <h3 class="font-heading text-2xl font-bold gradient-text mb-1">${p.title}</h3>
+            <p class="text-brand-secondary text-sm">${p.subtitle}</p>
+          </div>
+          <button onclick="closeProjectModal()" class="p-2 rounded-lg hover:bg-white/10 text-brand-muted hover:text-white transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          ${p.tools.map(t => `<span class="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-secondary border border-brand-primary/20">${t}</span>`).join('')}
+        </div>
+
+        <div class="space-y-6 text-sm text-brand-muted">
+          <div>
+            <h4 class="font-heading font-semibold text-brand-text text-base mb-1.5 flex items-center gap-2">
+              <i data-lucide="lightbulb" class="w-4 h-4 text-brand-secondary"></i> Overview
+            </h4>
+            <p class="leading-relaxed">${p.overview}</p>
+          </div>
+
+          <div>
+            <h4 class="font-heading font-semibold text-brand-text text-base mb-1.5 flex items-center gap-2">
+              <i data-lucide="target" class="w-4 h-4 text-rose-400"></i> Problem Statement
+            </h4>
+            <p class="leading-relaxed">${p.problem}</p>
+          </div>
+
+          <div>
+            <h4 class="font-heading font-semibold text-brand-text text-base mb-1.5 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> UX Solution
+            </h4>
+            <p class="leading-relaxed">${p.solution}</p>
+          </div>
+
+          <div>
+            <h4 class="font-heading font-semibold text-brand-text text-base mb-3">Key Features & Deliverables</h4>
+            <ul class="grid sm:grid-cols-2 gap-2">
+              ${p.features.map(f => `<li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i><span>${f}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <strong class="block mb-1 text-sm font-semibold">Key Outcome:</strong>
+            <p class="text-xs leading-relaxed text-emerald-300/90">${p.outcome}</p>
+          </div>
+        </div>
+      `;
+      projectModal.classList.add('active');
+      lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      projectModal.classList.remove('active');
+    }
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) closeProjectModal();
+    });
+
+    // Copy to Clipboard Utility
+    function copyToClipboard(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        document.getElementById('toast-text').textContent = `Copied "${text}" to clipboard!`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+      });
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span>Sending Message...</span>';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        document.getElementById('contact-form').reset();
+        const success = document.getElementById('form-success');
+        success.classList.remove('hidden');
+        setTimeout(() => success.classList.add('hidden'), 6000);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
