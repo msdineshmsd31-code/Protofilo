@@ -17,7 +17,9 @@ import {
   Brain,
   Clock,
 } from 'lucide-react';
-import { SiAdobexd, SiSketch, SiAdobephotoshop, SiAdobeillustrator, SiMiro, SiInvision, SiNotion } from 'react-icons/si';
+import { SiSketch, SiMiro, SiNotion } from 'react-icons/si';
+import { TbBrandAdobeXd, TbBrandAdobePhotoshop, TbBrandAdobeIllustrator } from 'react-icons/tb';
+import { FaInvision } from 'react-icons/fa6';
 
 interface SkillItem {
   name: string;
@@ -37,10 +39,10 @@ const categories: SkillCategory[] = [
     color: 'from-purple-500 to-pink-500',
     skills: [
       { name: 'Figma', icon: <Figma size={18} />, level: 90 },
-      { name: 'Adobe XD', icon: <SiAdobexd size={18} />, level: 85 },
+      { name: 'Adobe XD', icon: <TbBrandAdobeXd size={18} />, level: 85 },
       { name: 'Sketch', icon: <SiSketch size={18} />, level: 45 },
-      { name: 'Photoshop', icon: <SiAdobephotoshop size={18} />, level: 70 },
-      { name: 'Illustrator', icon: <SiAdobeillustrator size={18} />, level: 65 },
+      { name: 'Photoshop', icon: <TbBrandAdobePhotoshop size={18} />, level: 70 },
+      { name: 'Illustrator', icon: <TbBrandAdobeIllustrator size={18} />, level: 65 },
     ],
   },
   {
@@ -81,7 +83,7 @@ const categories: SkillCategory[] = [
     skills: [
       { name: 'Zeplin', icon: <Code size={18} />, level: 72 },
       { name: 'Miro', icon: <SiMiro size={18} />, level: 78 },
-      { name: 'InVision', icon: <SiInvision size={18} />, level: 68 },
+      { name: 'InVision', icon: <FaInvision size={18} />, level: 68 },
       { name: 'Notion', icon: <SiNotion size={18} />, level: 75 },
       { name: 'HTML/CSS', icon: <Code size={18} />, level: 50 },
     ],

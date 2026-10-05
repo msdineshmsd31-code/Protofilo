@@ -1,5 +1,6 @@
 import { ArrowUp, Heart, Mail, Phone, MapPin } from 'lucide-react';
-import { SiLinkedin, SiBehance } from 'react-icons/si';
+import { SiBehance } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const footerLinks = [
   { href: '#home', label: 'Home' },
@@ -46,7 +47,7 @@ export function Footer() {
                 className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-blue-400 hover:border-blue-400/40 transition-colors"
                 aria-label="LinkedIn"
               >
-                <SiLinkedin size={16} />
+                <FaLinkedinIn size={16} />
               </a>
               <a
                 href="https://behance.net/yourusername"

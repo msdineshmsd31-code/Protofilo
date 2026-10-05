@@ -13,7 +13,8 @@ import {
   Layers,
   CheckCircle2,
 } from 'lucide-react';
-import { SiLinkedin, SiBehance } from 'react-icons/si';
+import { SiBehance } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -106,7 +107,7 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     rel="noreferrer"
                     className="text-blue-400 hover:underline flex items-center gap-1"
                   >
-                    <SiLinkedin size={12} /> linkedin.com/in/dinesh-s-29568943b
+                    <FaLinkedinIn size={12} /> linkedin.com/in/dinesh-s-29568943b
                   </a>
                   <span className="text-white/20">|</span>
                   <a

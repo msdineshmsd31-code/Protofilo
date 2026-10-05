@@ -10,18 +10,20 @@ import {
   Sparkles,
 } from 'lucide-react';
 import {
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
   SiSketch,
   SiMiro,
-  SiInvision,
   SiNotion,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiGit,
   SiGithub,
 } from 'react-icons/si';
+import {
+  TbBrandAdobeXd,
+  TbBrandAdobePhotoshop,
+  TbBrandAdobeIllustrator,
+} from 'react-icons/tb';
+import { FaInvision } from 'react-icons/fa6';
 
 interface Tool {
   name: string;
@@ -31,15 +33,15 @@ interface Tool {
 
 const tools: Tool[] = [
   { name: 'Figma', category: 'UI/UX Design', icon: <Figma size={22} className="text-[#F24E1E]" /> },
-  { name: 'Adobe XD', category: 'Prototyping', icon: <SiAdobexd size={22} className="text-[#FF61F6]" /> },
-  { name: 'Photoshop', category: 'Asset Prep', icon: <SiAdobephotoshop size={22} className="text-[#31A8FF]" /> },
-  { name: 'Illustrator', category: 'Vectors & SVGs', icon: <SiAdobeillustrator size={22} className="text-[#FF9A00]" /> },
+  { name: 'Adobe XD', category: 'Prototyping', icon: <TbBrandAdobeXd size={22} className="text-[#FF61F6]" /> },
+  { name: 'Photoshop', category: 'Asset Prep', icon: <TbBrandAdobePhotoshop size={22} className="text-[#31A8FF]" /> },
+  { name: 'Illustrator', category: 'Vectors & SVGs', icon: <TbBrandAdobeIllustrator size={22} className="text-[#FF9A00]" /> },
   { name: 'Miro', category: 'User Journeys', icon: <SiMiro size={22} className="text-[#FFD02F]" /> },
   { name: 'Zeplin', category: 'Dev Handoff', icon: <Layers size={22} className="text-[#FBAE00]" /> },
   { name: 'Notion', category: 'Design Docs', icon: <SiNotion size={22} className="text-white" /> },
-  { name: 'InVision', category: 'Prototypes', icon: <SiInvision size={22} className="text-[#FF3366]" /> },
+  { name: 'InVision', category: 'Prototypes', icon: <FaInvision size={22} className="text-[#FF3366]" /> },
   { name: 'HTML5', category: 'Semantic Web', icon: <SiHtml5 size={22} className="text-[#E34F26]" /> },
-  { name: 'CSS3', category: 'Modern Styling', icon: <SiCss3 size={22} className="text-[#1572B6]" /> },
+  { name: 'CSS3', category: 'Modern Styling', icon: <SiCss size={22} className="text-[#1572B6]" /> },
   { name: 'Git', category: 'Version Control', icon: <SiGit size={22} className="text-[#F05032]" /> },
   { name: 'GitHub', category: 'Collaboration', icon: <SiGithub size={22} className="text-white" /> },
 ];

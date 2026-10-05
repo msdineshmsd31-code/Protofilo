@@ -15,7 +15,8 @@ import {
   Sparkles,
   ExternalLink,
 } from 'lucide-react';
-import { SiBehance, SiLinkedin } from 'react-icons/si';
+import { SiBehance } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 export function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -151,7 +152,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group"
               >
-                <SiLinkedin size={18} className="text-[#0A66C2]" />
+                <FaLinkedinIn size={18} className="text-[#0A66C2]" />
                 <span className="text-xs font-semibold text-brand-text group-hover:text-blue-400">
                   LinkedIn
                 </span>
