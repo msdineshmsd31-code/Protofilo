@@ -64,9 +64,9 @@ const certifications: Certification[] = [
     gradient: 'from-purple-600 to-pink-600',
     skills: [
       'Saral Banking App (16 Screens, 8 Languages)',
-      'Expense Tracker Case Study (25 Screens)',
       'Design Systems with Reusable Components',
       'WCAG Accessibility & Voice Commands',
+      'Usability Testing & Iterative Feedback',
     ],
     description:
       'Demonstrated mastery in end-to-end product design with in-depth case studies published on Behance, featuring reusable component libraries, multi-language support, and usability research.',

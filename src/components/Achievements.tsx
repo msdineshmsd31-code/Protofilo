@@ -6,17 +6,17 @@ import { Trophy, Eye, Users, Sparkles, TrendingUp, CheckCircle } from 'lucide-re
 
 const stats = [
   {
-    icon: Eye,
-    value: '25-Screen',
-    label: 'Expense Tracker App',
+    icon: Sparkles,
+    value: '16-Screen',
+    label: 'Saral Banking App',
     subtext: 'Published design case study on Behance',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: Sparkles,
-    value: '16-Screen',
-    label: 'Saral Banking App',
-    subtext: '8 Indian languages & voice accessibility',
+    icon: Eye,
+    value: '8',
+    label: 'Indian Languages',
+    subtext: 'Voice accessibility & regional support',
     gradient: 'from-amber-400 to-orange-500',
   },
   {
@@ -40,8 +40,8 @@ const achievementsList = [
     title: 'Published Case Studies on Behance',
     category: 'Design Portfolio & Research',
     description:
-      'Published in-depth case studies including the 16-screen Saral Mobile Banking App with 8 regional Indian languages and a comprehensive 25-screen Expense Tracker App design showcasing complete user empathy, typography, and atomic component systems.',
-    highlights: ['Saral 16-Screen Banking App', '25-Screen Expense Tracker', 'Design systems with reusable components'],
+      'Published comprehensive case studies including the 16-screen Saral Mobile Banking App with 8 regional Indian languages, voice commands, and amounts written in words, showcasing user empathy, typography, and atomic component systems.',
+    highlights: ['Saral 16-Screen Banking App', '8 Indian Regional Languages', 'Design systems with reusable components'],
   },
   {
     title: 'UI/UX Design Internship at Accent Techno Soft',

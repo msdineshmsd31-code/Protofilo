@@ -52,7 +52,6 @@ const timelineData: TimelineItem[] = [
       'Certified in Design Thinking for Beginners by Simplilearn SkillUp',
       'Certified in AI Neural Networks & Tools by Accent Techno Soft (ATS)',
       'Published Saral-Mobile Banking App (16 screens, 8 Indian languages, voice commands) on Behance',
-      'Published 25-Screen Expense Tracker App design case study on Behance',
     ],
     metrics: 'Case Studies on Behance',
   },

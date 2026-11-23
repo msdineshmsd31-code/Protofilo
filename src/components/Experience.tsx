@@ -121,8 +121,8 @@ export function Experience() {
               },
               {
                 emoji: '📱',
-                title: 'Behance Case Studies',
-                desc: 'Published Saral Banking (16 screens) & Expense Tracker (25 screens)',
+                title: 'Behance Case Study',
+                desc: 'Published Saral Banking app with 16 screens & 8 Indian languages',
               },
             ].map((item, i) => (
               <motion.div

@@ -94,28 +94,6 @@ const projects: Project[] = [
     gradient: 'from-emerald-600 to-teal-500',
     accentColor: 'emerald',
   },
-  {
-    title: 'Expense Tracker App Design',
-    subtitle: '25-Screen Financial App — Case Study on Behance',
-    tools: ['Figma'],
-    overview:
-      'Published a full-scale 25-screen mobile application case study on Behance, detailing the design of an intuitive personal expense and budget management tool.',
-    problem:
-      'Users frequently abandon expense management apps because logging transactions requires multiple tedious steps and lacks clear visual spending feedback.',
-    solution:
-      'Designed a 25-screen mobile application featuring rapid one-tap transaction logging, visual monthly budget analytics, customizable spending categories, and clean visual hierarchy.',
-    features: [
-      'Crafted 25 complete mobile UI screens covering all primary user flows',
-      'Designed visual budget breakdown cards and monthly trend charts',
-      'Optimized one-tap expense logging with automated category suggestions',
-      'Published complete research, screen layouts, and interaction flows on Behance',
-    ],
-    outcome:
-      'Published 25-screen case study on Behance, highlighting proficiency in large-scale mobile app architecture.',
-    gradient: 'from-amber-600 to-orange-500',
-    accentColor: 'amber',
-    behanceUrl: 'https://www.behance.net/dineshdinesh87',
-  },
 ];
 
 function ProjectModal({
@@ -250,7 +228,7 @@ export function Projects() {
         variants={staggerContainer}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="grid md:grid-cols-2 lg:grid-cols-2 gap-6"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {projects.map((project, i) => (
           <motion.div

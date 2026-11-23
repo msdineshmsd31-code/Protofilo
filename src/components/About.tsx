@@ -69,10 +69,9 @@ export function About() {
               </p>
               <p>
                 From conducting user research with 10+ participants to designing comprehensive design
-                systems across 16-screen and 25-screen mobile applications (such as the{' '}
-                <span className="text-brand-text">Saral-Mobile Banking App</span> with 8 Indian languages
-                and the <span className="text-brand-text">Expense Tracker App</span> published on Behance),
-                I bring an empathetic, research-backed methodology to every interface. My internship at{' '}
+                systems (such as the <span className="text-brand-text">Saral-Mobile Banking App</span> with
+                8 Indian languages published on Behance), I bring an empathetic, research-backed methodology
+                to every interface. My internship at{' '}
                 <span className="text-brand-text">Accent Techno Soft (Coimbatore)</span> further honed
                 my skills in delivering user-friendly, production-ready e-commerce screens.
               </p>

@@ -295,11 +295,7 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" /> Additional Information
                   </h2>
                   <div className="space-y-2 text-xs text-brand-muted">
-                    <p className="flex items-start gap-1.5">
-                      <span className="text-brand-primary font-bold">•</span>
-                      <span>Published a 25-Screen expense tracker app design case study on Behance</span>
-                    </p>
-                    <p className="pt-1 border-t border-white/5">
+                    <p>
                       <strong className="text-brand-text">Languages Known:</strong> English, Tamil<br />
                       <strong className="text-brand-text">Willing to Relocate:</strong> Yes<br />
                       <strong className="text-brand-text">Availability:</strong> Immediate
