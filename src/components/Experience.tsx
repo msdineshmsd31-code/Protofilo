@@ -57,11 +57,11 @@ export function Experience() {
               <div className="flex flex-col items-start sm:items-end gap-1 text-sm text-brand-muted">
                 <div className="flex items-center gap-1.5">
                   <Calendar size={14} />
-                  <span>Jun 2025 — Aug 2025</span>
+                  <span>May 2025 — Jun 2025</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <MapPin size={14} />
-                  <span>Coimbatore, India</span>
+                  <span>Coimbatore, Tamil Nadu</span>
                 </div>
               </div>
             </div>
@@ -110,19 +110,19 @@ export function Experience() {
           <div className="grid sm:grid-cols-3 gap-4">
             {[
               {
-                emoji: '🎓',
-                title: 'Google UX Certificate',
-                desc: 'Completed professional UX design training via Coursera',
+                emoji: '🎨',
+                title: 'Design Thinking (Simplilearn)',
+                desc: 'Certified in user empathy, ideation, and rapid prototyping principles',
               },
               {
-                emoji: '🔬',
-                title: 'User Research Practice',
-                desc: 'Conducted research with 20+ participants across projects',
+                emoji: '🤖',
+                title: 'AI Tools & Neural Networks',
+                desc: 'Certified by Accent Techno Soft (ATS) in AI-driven tools & workflow speed',
               },
               {
-                emoji: '🧩',
-                title: 'Design Systems',
-                desc: 'Built reusable component libraries for 15+ screen projects',
+                emoji: '📱',
+                title: 'Behance Case Studies',
+                desc: 'Published Saral Banking (16 screens) & Expense Tracker (25 screens)',
               },
             ].map((item, i) => (
               <motion.div

@@ -75,15 +75,15 @@ export function Contact() {
               <div>
                 <p className="text-xs uppercase tracking-wider text-brand-muted font-medium">Email Me</p>
                 <a
-                  href="mailto:dineshui26design@gmail.com"
+                  href="mailto:msdineshmsd31@gmail.com"
                   className="text-sm font-semibold text-brand-text hover:text-brand-secondary transition-colors"
                 >
-                  dineshui26design@gmail.com
+                  msdineshmsd31@gmail.com
                 </a>
               </div>
             </div>
             <button
-              onClick={() => handleCopy('dineshui26design@gmail.com', 'email')}
+              onClick={() => handleCopy('msdineshmsd31@gmail.com', 'email')}
               className="p-2 rounded-lg hover:bg-white/10 text-brand-muted hover:text-brand-text transition-colors"
               title="Copy Email"
             >
@@ -147,7 +147,7 @@ export function Contact() {
             </p>
             <div className="grid grid-cols-2 gap-3">
               <a
-                href="https://www.linkedin.com/in/dinesh-s-29568943b"
+                href="https://www.linkedin.com/in/dinesh-s29568943b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group"
@@ -160,7 +160,7 @@ export function Contact() {
               </a>
 
               <a
-                href="https://behance.net/yourusername"
+                href="https://www.behance.net/dineshdinesh87"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-cyan-500/40 hover:bg-cyan-500/5 transition-all group"

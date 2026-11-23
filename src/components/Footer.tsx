@@ -41,7 +41,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.linkedin.com/in/dinesh-s-29568943b"
+                href="https://www.linkedin.com/in/dinesh-s29568943b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-blue-400 hover:border-blue-400/40 transition-colors"
@@ -50,7 +50,7 @@ export function Footer() {
                 <FaLinkedinIn size={16} />
               </a>
               <a
-                href="https://behance.net/yourusername"
+                href="https://www.behance.net/dineshdinesh87"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-cyan-400 hover:border-cyan-400/40 transition-colors"
@@ -59,7 +59,7 @@ export function Footer() {
                 <SiBehance size={16} />
               </a>
               <a
-                href="mailto:dineshui26design@gmail.com"
+                href="mailto:msdineshmsd31@gmail.com"
                 className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-brand-muted hover:text-brand-secondary hover:border-brand-secondary/40 transition-colors"
                 aria-label="Email"
               >

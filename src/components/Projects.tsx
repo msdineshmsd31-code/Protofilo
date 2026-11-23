@@ -25,76 +25,96 @@ interface Project {
   outcome: string;
   gradient: string;
   accentColor: string;
+  behanceUrl?: string;
 }
 
 const projects: Project[] = [
   {
     title: 'Digital Marketer Discovery App',
-    subtitle: 'Banking App Redesign — UX Case Study',
-    tools: ['Figma', 'Miro', 'Maze'],
+    subtitle: 'Banking App Redesign — Case Study',
+    tools: ['Figma', 'Figjam', 'Google Forms'],
     overview:
-      'Comprehensive UX case study focused on redesigning an existing banking application to improve usability and task completion rates.',
+      'In-depth academic UX case study focused on uncovering pain points in an existing banking application and designing user-centric solutions to improve task completion and usability.',
     problem:
-      'Users faced significant pain points navigating the existing banking app, leading to frustration and low task completion rates.',
+      'Users experienced significant friction and cognitive overload navigating the existing banking app, resulting in frustration and drop-offs during routine transactions.',
     solution:
-      'Conducted extensive user research with 20+ participants, created data-driven personas and journey maps, then designed high-fidelity interactive prototypes informed by real user insights.',
+      'Conducted user interviews and surveys with 10+ participants to identify core friction points. Formulated personas, journey maps, and information architecture, followed by low-fidelity wireframes and interactive Figma prototypes.',
     features: [
-      'User interviews & surveys with 20+ participants',
-      'User personas & journey maps',
-      'Information architecture redesign',
-      'Low-fidelity wireframes',
-      'High-fidelity interactive prototypes in Figma',
-      'Usability testing sessions with iterative design',
+      'Conducted user interviews & surveys with 10+ participants to identify pain points',
+      'Created data-driven user personas, journey maps & clear information architecture',
+      'Designed low-fidelity wireframes and high-fidelity interactive prototypes in Figma',
+      'Conducted usability testing sessions and refined the design based on user feedback',
     ],
-    outcome: 'Improved task completion rate by 35% through iterative design and user testing.',
+    outcome:
+      'Substantially reduced user confusion and improved navigation clarity through iterative user feedback and testing.',
     gradient: 'from-blue-600 to-cyan-500',
     accentColor: 'blue',
   },
   {
-    title: 'E-Commerce Website UX',
-    subtitle: 'Checkout Flow Redesign — Case Study',
-    tools: ['Adobe XD', 'Figma', 'Google Forms'],
+    title: 'Saral-Mobile Banking App',
+    subtitle: '16-Screen Banking App for First-Time Users — Case Study',
+    tools: ['Figma'],
     overview:
-      'End-to-end UX case study focused on redesigning the checkout flow of an e-commerce website to reduce cart abandonment rates.',
+      'Comprehensive 16-screen mobile banking app redesign thoughtfully engineered to eliminate barriers for first-time digital banking users, featuring extensive accessibility and regional language support.',
     problem:
-      'The existing checkout flow was causing high cart abandonment rates due to poor UX, confusing navigation, and lack of visual consistency.',
+      'First-time digital banking users in India frequently struggle with complex interfaces, language barriers, English financial terminology, and lack of confidence in numeric entries.',
     solution:
-      'Built a comprehensive reusable design system and redesigned the entire checkout flow with consistent components, validated through moderated usability tests.',
+      'Built a complete design system with cohesive colors, typography, and reusable components. Added multi-language support across 8 Indian languages, voice commands, and amounts written in words to guarantee clarity and trust.',
     features: [
-      'Checkout flow analysis & redesign',
-      'Reusable design system (15+ screens)',
-      'Consistent component library',
-      'Clickable prototypes',
-      'Moderated usability testing',
-      'Detailed case study published on Behance',
+      'Redesigned 16 comprehensive mobile banking screens for first-time digital users',
+      'Engineered an atomic design system with consistent colours, typography & reusable components',
+      'Added support for 8 Indian regional languages & integrated voice navigation commands',
+      'Displayed monetary amounts in words alongside numbers to maximize accessibility and trust',
+      'Documented the full end-to-end design process in a published Behance case study',
     ],
     outcome:
-      'Reduced cart abandonment through streamlined checkout UX, documented in a detailed Behance case study.',
+      'Published comprehensive case study on Behance, presenting an inclusive and empathetic mobile banking experience.',
     gradient: 'from-purple-600 to-pink-500',
     accentColor: 'purple',
+    behanceUrl: 'https://www.behance.net/dineshdinesh87',
   },
   {
-    title: 'E-Commerce Website Design',
-    subtitle: 'Mobile Accessories Store — Internship Project',
+    title: 'Mobile Accessories E-Commerce',
+    subtitle: 'Store Redesign — Internship Project (Accent Techno Soft)',
     tools: ['Figma', 'Adobe XD'],
     overview:
-      'Designed a complete mobile accessories e-commerce website during internship at Accent Techno Soft, applying professional UI/UX design principles.',
+      'Designed a modern mobile accessories e-commerce website during UI/UX design internship at Accent Techno Soft, applying industry-standard user-centered design practices.',
     problem:
-      'The client needed a modern, user-friendly e-commerce website for mobile accessories with smooth navigation and excellent usability.',
+      'The client required a contemporary, accessible, and high-converting storefront layout that allowed users to quickly find compatible accessories for their devices.',
     solution:
-      'Applied clean visual design, accessibility standards, and user-centered design principles to create user-friendly layouts with smooth navigation.',
+      'Created user-friendly layouts prioritizing smooth navigation, visual hierarchy, and usability. Applied clean design aesthetics and accessibility (WCAG) guidelines across all product discovery and checkout screens.',
     features: [
-      'User-friendly product layouts',
-      'Smooth navigation & usability focus',
-      'Clean visual design language',
-      'Accessibility-first approach',
-      'Multiple UI screen designs',
-      'User experience optimization',
+      'Designed mobile accessories e-commerce layouts focused on intuitive browsing',
+      'Created smooth navigation paths and streamlined filtering by device model',
+      'Applied clean visual design, accessibility (WCAG basics), and user-centered design principles',
+      'Developed multiple production-ready UI screens to elevate user engagement',
     ],
     outcome:
-      'Delivered production-ready UI screens that improved overall user experience and engagement for the client.',
+      'Delivered polished UI screens that enhanced user experience and browsing efficiency for client handover.',
     gradient: 'from-emerald-600 to-teal-500',
     accentColor: 'emerald',
+  },
+  {
+    title: 'Expense Tracker App Design',
+    subtitle: '25-Screen Financial App — Case Study on Behance',
+    tools: ['Figma'],
+    overview:
+      'Published a full-scale 25-screen mobile application case study on Behance, detailing the design of an intuitive personal expense and budget management tool.',
+    problem:
+      'Users frequently abandon expense management apps because logging transactions requires multiple tedious steps and lacks clear visual spending feedback.',
+    solution:
+      'Designed a 25-screen mobile application featuring rapid one-tap transaction logging, visual monthly budget analytics, customizable spending categories, and clean visual hierarchy.',
+    features: [
+      'Crafted 25 complete mobile UI screens covering all primary user flows',
+      'Designed visual budget breakdown cards and monthly trend charts',
+      'Optimized one-tap expense logging with automated category suggestions',
+      'Published complete research, screen layouts, and interaction flows on Behance',
+    ],
+    outcome:
+      'Published 25-screen case study on Behance, highlighting proficiency in large-scale mobile app architecture.',
+    gradient: 'from-amber-600 to-orange-500',
+    accentColor: 'amber',
+    behanceUrl: 'https://www.behance.net/dineshdinesh87',
   },
 ];
 
@@ -194,6 +214,20 @@ function ProjectModal({
             </div>
             <p className="text-brand-muted text-sm">{project.outcome}</p>
           </div>
+
+          {project.behanceUrl && (
+            <div className="pt-2">
+              <a
+                href={project.behanceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium text-xs hover:shadow-glow-blue transition-all"
+              >
+                <span>View Case Study on Behance</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -216,7 +250,7 @@ export function Projects() {
         variants={staggerContainer}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid md:grid-cols-2 lg:grid-cols-2 gap-6"
       >
         {projects.map((project, i) => (
           <motion.div

@@ -57,22 +57,24 @@ export function About() {
               <p>
                 I'm <span className="text-brand-secondary font-medium">Dinesh S</span>, a creative
                 and user-focused <span className="text-brand-text">UI/UX Designer</span> based in
-                Chennai, India. With a strong foundation in user-centered design, I specialize in
-                transforming complex problems into intuitive, accessible, and visually engaging
-                interfaces.
+                Chennai, Tamil Nadu, India. With a strong foundation in user-centered design,
+                wireframing, and prototyping, I am passionate about solving real user problems through
+                intuitive, accessible, and visually engaging interfaces.
               </p>
               <p>
                 Currently completing my{' '}
-                <span className="text-brand-text">B.Sc in Computer Science</span> at Muthayammal
-                College of Arts and Science (Periyar University), I combine technical knowledge
-                with design thinking to build products that truly resonate with users.
+                <span className="text-brand-text">Bachelor of Science in Computer Science</span> at
+                Muthayammal College of Arts and Science (Periyar University, CGPA: 6.6 / 10), I combine
+                computing principles with design thinking to build products that truly serve people.
               </p>
               <p>
-                From conducting user research with 20+ participants to building reusable design
-                systems across 15+ screens, I bring a data-driven and empathetic approach to every
-                project. My internship at{' '}
-                <span className="text-brand-text">Accent Techno Soft</span> further strengthened
-                my ability to deliver production-ready designs in real-world settings.
+                From conducting user research with 10+ participants to designing comprehensive design
+                systems across 16-screen and 25-screen mobile applications (such as the{' '}
+                <span className="text-brand-text">Saral-Mobile Banking App</span> with 8 Indian languages
+                and the <span className="text-brand-text">Expense Tracker App</span> published on Behance),
+                I bring an empathetic, research-backed methodology to every interface. My internship at{' '}
+                <span className="text-brand-text">Accent Techno Soft (Coimbatore)</span> further honed
+                my skills in delivering user-friendly, production-ready e-commerce screens.
               </p>
             </div>
           </motion.div>

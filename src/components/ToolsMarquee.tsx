@@ -36,13 +36,13 @@ const tools: Tool[] = [
   { name: 'Adobe XD', category: 'Prototyping', icon: <TbBrandAdobeXd size={22} className="text-[#FF61F6]" /> },
   { name: 'Photoshop', category: 'Asset Prep', icon: <TbBrandAdobePhotoshop size={22} className="text-[#31A8FF]" /> },
   { name: 'Illustrator', category: 'Vectors & SVGs', icon: <TbBrandAdobeIllustrator size={22} className="text-[#FF9A00]" /> },
+  { name: 'Sketch (basic)', category: 'Interface Design', icon: <SiSketch size={22} className="text-[#F7B500]" /> },
   { name: 'Miro', category: 'User Journeys', icon: <SiMiro size={22} className="text-[#FFD02F]" /> },
   { name: 'Zeplin', category: 'Dev Handoff', icon: <Layers size={22} className="text-[#FBAE00]" /> },
-  { name: 'Notion', category: 'Design Docs', icon: <SiNotion size={22} className="text-white" /> },
-  { name: 'InVision', category: 'Prototypes', icon: <FaInvision size={22} className="text-[#FF3366]" /> },
+  { name: 'Figjam', category: 'UX Brainstorming', icon: <Figma size={22} className="text-[#A259FF]" /> },
   { name: 'HTML5', category: 'Semantic Web', icon: <SiHtml5 size={22} className="text-[#E34F26]" /> },
   { name: 'CSS3', category: 'Modern Styling', icon: <SiCss size={22} className="text-[#1572B6]" /> },
-  { name: 'Git', category: 'Version Control', icon: <SiGit size={22} className="text-[#F05032]" /> },
+  { name: 'Notion', category: 'Design Docs', icon: <SiNotion size={22} className="text-white" /> },
   { name: 'GitHub', category: 'Collaboration', icon: <SiGithub size={22} className="text-white" /> },
 ];
 

@@ -143,25 +143,27 @@ export function Hero({ onOpenResume }: HeroProps) {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="#contact"
-            className="btn-glow group px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-primary to-blue-600 text-white shadow-lg shadow-brand-primary/25 hover:shadow-glow-blue hover:-translate-y-0.5 transition-all duration-300"
+            href="https://www.behance.net/dineshdinesh87"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-glow group px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-primary to-blue-600 text-white shadow-lg shadow-brand-primary/25 hover:shadow-glow-blue hover:-translate-y-0.5 transition-all duration-300 flex items-center"
           >
-            Hire Me
+            <span>Behance Portfolio</span>
             <Sparkles size={16} className="inline ml-2 group-hover:rotate-12 transition-transform" />
           </a>
           <a
             href="#contact"
-            className="group px-7 py-3.5 rounded-xl font-semibold text-sm border border-brand-primary/30 text-brand-text hover:border-brand-secondary hover:text-brand-secondary hover:bg-brand-primary/5 hover:-translate-y-0.5 transition-all duration-300"
+            className="group px-7 py-3.5 rounded-xl font-semibold text-sm border border-brand-primary/30 text-brand-text hover:border-brand-secondary hover:text-brand-secondary hover:bg-brand-primary/5 hover:-translate-y-0.5 transition-all duration-300 flex items-center"
           >
             <Mail size={16} className="inline mr-2" />
-            Contact Me
+            <span>Contact Me</span>
           </a>
           <button
             onClick={onOpenResume}
             className="group px-7 py-3.5 rounded-xl font-semibold text-sm border border-brand-primary/30 text-brand-secondary hover:bg-brand-primary/10 hover:border-brand-secondary hover:-translate-y-0.5 transition-all duration-300 flex items-center"
           >
             <Download size={16} className="inline mr-2" />
-            Resume
+            <span>Resume</span>
           </button>
         </motion.div>
 

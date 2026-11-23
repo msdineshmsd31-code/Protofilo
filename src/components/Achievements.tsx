@@ -7,55 +7,55 @@ import { Trophy, Eye, Users, Sparkles, TrendingUp, CheckCircle } from 'lucide-re
 const stats = [
   {
     icon: Eye,
-    value: '1,000+',
-    label: 'Case Study Views',
-    subtext: 'Combined readership across Behance & Medium',
+    value: '25-Screen',
+    label: 'Expense Tracker App',
+    subtext: 'Published design case study on Behance',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: Trophy,
-    value: 'Finalist',
-    label: 'Design Hackathon',
-    subtext: 'College-level UI/UX competition solution',
+    icon: Sparkles,
+    value: '16-Screen',
+    label: 'Saral Banking App',
+    subtext: '8 Indian languages & voice accessibility',
     gradient: 'from-amber-400 to-orange-500',
   },
   {
     icon: Users,
-    value: '20+',
-    label: 'User Research Interviews',
-    subtext: 'Conducted for Digital Marketer Case Study',
+    value: '10+',
+    label: 'Research Participants',
+    subtext: 'Interviews & surveys for banking app redesign',
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    icon: TrendingUp,
-    value: '+35%',
-    label: 'Task Completion Boost',
-    subtext: 'Validated through Maze usability testing',
+    icon: Trophy,
+    value: '2',
+    label: 'Certifications',
+    subtext: 'Design Thinking (Simplilearn) & AI Tools (ATS)',
     gradient: 'from-emerald-400 to-teal-500',
   },
 ];
 
 const achievementsList = [
   {
-    title: 'Published UX Case Studies on Behance & Medium',
-    category: 'Thought Leadership & Portfolio',
+    title: 'Published Case Studies on Behance',
+    category: 'Design Portfolio & Research',
     description:
-      'Authored two comprehensive end-to-end UX case studies detailing user empathy, personas, wireframes, component design systems, and moderated usability testing. Gathered over 1,000+ views and community appreciation.',
-    highlights: ['15+ screen design systems', 'Maze testing telemetry', 'Interactive Figma prototypes'],
+      'Published in-depth case studies including the 16-screen Saral Mobile Banking App with 8 regional Indian languages and a comprehensive 25-screen Expense Tracker App design showcasing complete user empathy, typography, and atomic component systems.',
+    highlights: ['Saral 16-Screen Banking App', '25-Screen Expense Tracker', 'Design systems with reusable components'],
   },
   {
-    title: 'Finalist / Winner — College-Level UI/UX Design Hackathon',
-    category: 'Rapid Prototyping & Problem Solving',
+    title: 'UI/UX Design Internship at Accent Techno Soft',
+    category: 'Industry Experience',
     description:
-      'Competed in an intense timed design sprint solving real-world user interface challenges. Conceptualized, wireframed, and presented an accessible prototype judged on usability, visual hierarchy, and feasibility.',
-    highlights: ['Time-constrained prototyping', 'User journey optimization', 'Jury recognition'],
+      'Completed internship designing a complete mobile accessories e-commerce website in Coimbatore. Delivered user-friendly layouts, intuitive navigation, and clean visual design adhering to accessibility standards.',
+    highlights: ['E-commerce UI workflows', 'Smooth navigation architecture', 'Client-ready UI delivery'],
   },
   {
-    title: 'Active Core Member — College Design & HCI Club',
-    category: 'Community & Peer Mentorship',
+    title: 'Industry Certifications in Design Thinking & AI Tools',
+    category: 'Continuous Professional Learning',
     description:
-      'Collaborates with fellow computer science peers and design enthusiasts to organize UI/UX workshops, Figma tips sessions, and design critique circles at Muthayammal College.',
-    highlights: ['Design critique sessions', 'Design thinking advocacy', 'Cross-functional collaboration'],
+      'Earned credentials in Design Thinking for Beginners from Simplilearn SkillUp and AI Neural Networks & Tools from Accent Techno Soft (ATS), combining creative empathy with modern AI-accelerated workflows.',
+    highlights: ['Simplilearn Design Thinking', 'Accent Techno Soft AI Certification', 'Human-centered methodology'],
   },
 ];
 
